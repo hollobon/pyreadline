@@ -59,7 +59,7 @@ def is_word_token(str):
     return not is_non_word_token(str)
     
 def is_non_word_token(str):
-    if len(str) != 1 or str in " \t\n":
+    if len(str) != 1 or not str.isalnum():
         return True
     else:
         return False
